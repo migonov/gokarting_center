@@ -1,0 +1,33 @@
+{{define "subject"}}Your results{{end}}
+
+{{define "plainBody"}}
+Hi {{.name}},
+
+Your last session info - {{.date}}:
+
+- kart: {{.gokart}}, {{.horsepower}}hp
+
+- best lap: {{.time}}
+
+GokartingCenter
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <p>Hi {{.name}},</p>
+    <p>Your last session info - {{.date}}:</p>
+    <p>- kart: {{.gokart}}, {{.horsepower}}hp</p>
+    <p>- best lap: {{.time}}</p>
+    <p>GokartingCenter</p>
+</body>
+
+</html>
+{{end}}
